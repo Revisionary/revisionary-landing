@@ -87,8 +87,8 @@
 
 <script>
 
-  import Navigation from '~/components/Navigation.vue';
-  import Play from '~/components/Play.vue';
+  import Navigation from '~/components/organisms/Navigation.vue';
+  import Play from '~/components/atoms/Play.vue';
 
 	export default {
 		components: {

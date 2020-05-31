@@ -55,12 +55,10 @@
 </template>
 
 <script>
-	import Logo from '~/components/Logo.vue'
-  import More from '~/components/More.vue'
+  import More from '~/components/atoms/More.vue'
 
 	export default {
 		components: {
-			Logo,
       More
 		},
 	};

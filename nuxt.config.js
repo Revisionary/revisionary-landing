@@ -42,6 +42,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/global-components',
   ],
   /*
   ** Nuxt.js modules
