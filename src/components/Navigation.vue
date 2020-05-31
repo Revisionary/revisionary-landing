@@ -1,3 +1,10 @@
+<!--
+  *
+  = Navigation Component
+  = Includes navigation component.
+  *
+-->
+
 <template>
 
   <header>
@@ -57,8 +64,6 @@
 </script>
 
 <style lang="scss">
-
-  @import "~/assets/style/config/variables";
 
   header {
     //background-color: #101218;
