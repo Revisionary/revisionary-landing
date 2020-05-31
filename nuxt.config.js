@@ -17,7 +17,7 @@ export default {
     ]
   },
 	router: {
-		prefetchLinks: false
+		prefetchLinks: false,
 	},
   /*
   ** Customize the progress-bar color

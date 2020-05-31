@@ -21,7 +21,7 @@
           <li class="nav-element"><a href="#">Features</a></li>
           <li class="nav-element"><a href="#">Use Cases</a></li>
           <li class="nav-element"><a href="#">Plans</a></li>
-          <li class="nav-element"><a href="#"><i class="icon icon_more"></i></a></li>
+          <li class="nav-element"><a href="#"><More /></a></li>
         </ul>
 
       </div>
@@ -56,9 +56,12 @@
 
 <script>
 	import Logo from '~/components/Logo.vue'
+  import More from '~/components/More.vue'
+
 	export default {
 		components: {
-			Logo
+			Logo,
+      More
 		},
 	};
 </script>
