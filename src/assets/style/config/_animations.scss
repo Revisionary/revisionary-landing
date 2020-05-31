@@ -1,0 +1,100 @@
+/**
+ * = Animations
+ *
+ * Add your desired animations & keep it clean.
+ *
+ * ========================================================================= */
+
+
+ @-webkit-keyframes slideInUp {
+   from {
+     -webkit-transform: translate3d(0, 100%, 0);
+     transform: translate3d(0, 100%, 0);
+     visibility: visible;
+   }
+
+   to {
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+   }
+ }
+
+ @keyframes slideInUp {
+   from {
+     -webkit-transform: translate3d(0, 100%, 0);
+     transform: translate3d(0, 100%, 0);
+     visibility: visible;
+   }
+
+   to {
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+   }
+ }
+
+ .slideInUp {
+   -webkit-animation-name: slideInUp;
+   animation-name: slideInUp;
+ }
+
+
+ @-webkit-keyframes fadeIn {
+   from {
+     opacity: 0;
+     visibility: hidden;
+   }
+
+   to {
+     opacity: 1;
+     visibility: visible;
+   }
+ }
+
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+     visibility: hidden;
+   }
+
+   to {
+     opacity: 1;
+     visibility: visible;
+   }
+ }
+
+ .slideInUp {
+   -webkit-animation-name: fadeIn;
+   animation-name: fadeIn;
+ }
+
+
+ @-webkit-keyframes slideInDown {
+   from {
+     -webkit-transform: translate3d(0, -100%, 0);
+     transform: translate3d(0, -100%, 0);
+     visibility: visible;
+   }
+
+   to {
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+   }
+ }
+
+ @keyframes slideInDown {
+   from {
+     -webkit-transform: translate3d(0, -100%, 0);
+     transform: translate3d(0, -100%, 0);
+     visibility: visible;
+   }
+
+   to {
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+   }
+ }
+
+ .slideInDown {
+   -webkit-animation-name: slideInDown;
+   animation-name: slideInDown;
+ }
