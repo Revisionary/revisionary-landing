@@ -213,6 +213,189 @@ figure {
 }
 
 
+.nav-tabs {
+	width: 410px;
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+	margin-top: 20px;
+	display: inline-block;
+	border-left: 2px solid rgb(229, 232, 237);
+	> li {
+		display: block;
+    margin: 0;
+    border-left: 3px solid transparent;
+    padding: 15px 25px;
+    width: auto;
+    background-color: transparent;
+    transition: .3s all;
+    margin-left: -2px;
+		> a {
+			text-decoration: none;
+			position: relative;
+			display: inline-block;
+			.tab-title {
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 36px;
+				letter-spacing: -.03em;
+				color: rgba(3,27,78,.4);
+				transition: .3s all;
+			}
+			.tab-icon {
+				display: inline-block;
+		    background: rgb(222, 226, 234);
+		    color: rgba(255,255,255,.8);
+		    border: 1px solid transparent;
+		    box-sizing: border-box;
+		    border-radius: 10px;
+		    font-weight: 600;
+		    width: 36px;
+		    height: 36px;
+		    text-align: center;
+		    line-height: 36px;
+		    font-size: 19px;
+		    margin-right: 10px;
+		    transition: .3s all;
+			}
+			.tab-content {
+				margin-top: 5px;
+				font-size: 18px;
+				line-height: 27px;
+				letter-spacing: -0.025em;
+				color: rgba(85, 98, 116, 0.8);
+				display: none;
+			}
+		}
+		&.active {
+			background-color: transparent;
+	    display: block;
+	    /* border-radius: 10px; */
+	    padding: 15px 25px;
+	    border-left: 2px solid #047ef3;
+			> a,
+			> a:hover,
+			> a:focus {
+				cursor: default;
+				.tab-title {
+					color: $title-color;
+				}
+				.tab-icon {
+					background: #0363f3;
+					color: #FFFFFF;
+					border: 1px solid rgba(118, 129, 144, 0.12);
+					box-shadow: 0px 6px 11px rgba(58, 62, 87, 0.15);
+				}
+				.tab-content {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&.white-skin {
+		> li {
+			background-color: rgba(0,0,0,0.05);
+			> a,
+			> a:hover,
+			> a:focus {
+				.tab-title {
+					color: rgba(255, 255, 255, 0.5);
+					transition: 0.3s all;
+				}
+				.tab-icon {
+					background: rgba(255, 255, 255, 0.2);
+					color: rgba(255, 255, 255, 0.5);
+				}
+				.tab-content {
+					color: rgba(255, 255, 255, 0.7);
+				}
+			}
+			&.active {
+				background-color: rgba(0,0,0,0.15);
+				> a,
+				> a:hover,
+				> a:focus {
+					.tab-title {
+						color: #FFF;
+					}
+					.tab-icon {
+						background: #FFF;;
+						color: #0363F3;
+					}
+				}
+			}
+		}
+	}
+
+	&.vertical {
+		width: 100%;
+		border-bottom: 2px solid #e5e8ed;
+		border-left: none;
+		display: flex;
+  	flex-wrap: wrap;
+		> li {
+			display: inline-block;
+			background-color: transparent;
+			margin-bottom: -2px;
+			border-bottom: 2px solid transparent;
+			border-left: none;
+			border-radius: 0;
+			padding: 20px 25px;
+			flex: auto;
+			> a {
+				text-decoration: none;
+				position: relative;
+				display: inline-block;
+			}
+
+			&.active {
+				background-color: transparent;
+				border-bottom: 2px solid #047ef3;
+				border-left: none;
+				padding: 20px 25px;
+				> a,
+				> a:hover,
+				> a:focus {
+					.tab-icon {
+						background: #0363F3;
+						color: #FFF;
+						&.purple {
+							background: #0363F3;
+						}
+						&.blue {
+							background: #ff5e57;
+						}
+						&.orange {
+							background: #ffa801;
+						}
+						&.dark {
+							background: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.tab-content {
+
+	> .tab-pane {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	> .active {
+		display: block;
+	}
+}
+
+
 /**
  * = Include Tools
  *

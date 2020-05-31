@@ -104,6 +104,8 @@
   section.headline {
     position: relative;
     background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') center center/cover no-repeat;
+    background: url('/test.jpg') center center/cover no-repeat;
+    background: url('/test-2.jpg') bottom center/cover no-repeat;
     background-color: #101218;
     background-blend-mode: color-dodge;
     .wrap-headline {
@@ -119,6 +121,7 @@
       right: 0;
       bottom: 0;
       background: linear-gradient(180deg,rgba(2,11,29,.8) 15%,rgba(2,11,29,.99) 60%);
+      background: linear-gradient(180deg, rgba(2, 11, 29, 0.85) -6%, rgba(2, 11, 29, 1) 70%);
     }
     h1 {
       font-size: 68px;
