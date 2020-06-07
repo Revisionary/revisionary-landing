@@ -17,11 +17,11 @@
 
           <div class="section-content">
 
-            <h2 class="section-title">All-in-one dashboard <br>for your feedbacks</h2>
+            <h2 class="section-title">Dashboard <br>that perfects.</h2>
 
             <p class="section-sub">Intuitive dashboard helps you track all of your <br>projects, feedbacks and team in one place.</p>
 
-            <div class="tabs" v-cloack>
+            <div class="tabs">
               <ul class="nav nav-tabs">
                 <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
                   <a :href="tab.id" @click.prevent="show = index">

@@ -257,6 +257,9 @@ figure {
 		    font-size: 19px;
 		    margin-right: 10px;
 		    transition: .3s all;
+				svg {
+					vertical-align: text-top;
+				}
 			}
 			.tab-content {
 				margin-top: 5px;
@@ -383,7 +386,7 @@ figure {
 .tab-content {
 
 	> .tab-pane {
-		display: none;
+		//display: none;
 
 		&.active {
 			display: block;

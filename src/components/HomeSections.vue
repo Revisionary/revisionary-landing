@@ -9,11 +9,15 @@
 
   <div>
 
-    <brands />
+    <Brands />
 
     <HowItWorks />
 
     <PinFeatures />
+
+    <Features />
+
+    <Collaboration />
 
   </div>
 
@@ -24,12 +28,16 @@
   import Brands from '~/components/organisms/Brands.vue'
   import HowItWorks from '~/components/organisms/HowItWorks.vue'
   import PinFeatures from '~/components/organisms/Pinfeatures.vue'
+  import Features from '~/components/organisms/Features.vue'
+  import Collaboration from '~/components/organisms/Collaboration.vue'
 
 	export default {
     components: {
       Brands,
       HowItWorks,
-      PinFeatures
+      PinFeatures,
+      Features,
+      Collaboration
 
     }
 	};
@@ -80,11 +88,11 @@
 .section-content {
   .section-title {
     font-weight: 500;
-    font-size: 42px;
+    font-size: 55px;
     letter-spacing: -0.03em;
     color: $title-color;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.1;
   }
   .section-sub {
     font-size: 20px;

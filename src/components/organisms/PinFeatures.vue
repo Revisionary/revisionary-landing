@@ -27,29 +27,34 @@
               <figure class="full float-left">
                 <img :src="tab.tabImage" alt="">
               </figure>
+              <figure class="full float-left pin">
+                <img :src="tab.tabPin" alt="">
+              </figure>
             </div>
 
           </div>
 
         </div>
 
-        <div class="col col-relative xl-2-12">
+        <div class="col col-relative xl-1-12">
         </div>
 
-        <div class="col xl-5-12">
+        <div class="col xl-5-12" style="padding-left: 60px">
 
-          <div class="section-content">
+          <div class="section-content white">
 
-            <h2 class="section-title">Visualize your feedback <br> like never before</h2>
+            <h2 class="section-title">Your feedback, <br> visualized.</h2>
 
             <p class="section-sub">See your changes before developers apply <br> them for you. Do it yourself in seconds and see...</p>
 
-            <div class="tabs" v-cloack>
-              <ul class="nav nav-tabs">
+            <div class="tabs">
+              <ul class="nav nav-tabs white-skin">
                 <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
                   <a :href="tab.id" @click.prevent="show = index">
                     <div class="tab-title">
-                      <span class="tab-icon">{{tab.icon}}</span>
+                      <span class="tab-icon">
+                        <component :is="tab.icon"></component>
+                      </span>
                       {{tab.title}}
                     </div>
                     <div class="tab-content">
@@ -74,36 +79,49 @@
 
 <script>
 
+// Icons
+import IconFile from '~/components/atoms/icon-file.vue'
+import IconSliders from '~/components/atoms/icon-sliders.vue'
+import IconMove from '~/components/atoms/icon-move.vue'
+import IconDocs from '~/components/atoms/icon-docs.vue'
+
 export default {
+  components: {
+    IconFile,
+    IconSliders,
+    IconMove,
+    IconDocs,
+  },
   data: function () {
     return {
       show: 0,
       tabs: [
         {
-          title: 'Start with URL',
+          title: 'Change the live content',
           content: 'Put your URL and start giving or receiving feedbacks, simple is that.',
-          icon: '1',
+          icon: 'icon-file',
           id: '#tab-1',
-          tabImage: '/screens/dashboard.png',
+          tabImage: '/screens/pin-page.png',
+          tabPin: '/screens/pin.png',
         },
         {
-          title: 'Add Your Feedback',
+          title: 'Style in live',
           content: 'Put your URL and start giving or receiving feedbacks, simple is that.',
-          icon: '2',
+          icon: 'icon-sliders',
           id: '#tab-2',
           tabImage: 'asdf',
         },
         {
-          title: 'Collaborate with others',
+          title: 'Move or change everything',
           content: 'Put your URL and start giving or receiving feedbacks, simple is that.',
-          icon: '3',
+          icon: 'icon-move',
           id: '#tab-3',
           tabImage: 'asdf',
         },
         {
-          title: 'Organize everything',
+          title: 'See the content differences',
           content: 'Put your URL and start giving or receiving feedbacks, simple is that.',
-          icon: '4',
+          icon: 'icon-docs',
           id: '#tab-4',
           tabImage: 'asdf',
         },
@@ -131,7 +149,7 @@ export default {
 
 
   section.section--2 {
-    background-color: $cloud-blue;
+    background-color: #0363F3;
     .wrap {
       min-height: 1050px;
     }

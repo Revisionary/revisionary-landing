@@ -12,6 +12,10 @@
 
       <div class="wrap xl-gutter-24 xl-center xl-middle xl-5">
 
+        <div class="col xl-1-1">
+          <span>Trusted by innovative companies</span>
+        </div>
+
         <div class="col">
           <img src="/brands/xounts.png" alt="" width="130" height="26">
         </div>

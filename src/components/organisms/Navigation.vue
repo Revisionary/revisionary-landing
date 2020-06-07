@@ -8,9 +8,10 @@
 <template>
 
   <header>
+
     <div class="wrap">
 
-      <div class="col xl-4-12">
+      <div class="col xl-8-12">
 
         <div class="brand">
           <a href="#"><logo /></a>
@@ -21,12 +22,12 @@
           <li class="nav-element"><a href="#">Features</a></li>
           <li class="nav-element"><a href="#">Use Cases</a></li>
           <li class="nav-element"><a href="#">Plans</a></li>
-          <li class="nav-element"><a href="#"><More /></a></li>
+          <li class="nav-element"><a href="#"><IconMore /></a></li>
         </ul>
 
       </div>
 
-      <div class="col xl-4-12 xl-center">
+      <div class="col xl-4-12 xl-center" style="display: none;">
 
         <ul class="live-preview">
           <li class="nav-element"><a href="#">
@@ -55,11 +56,11 @@
 </template>
 
 <script>
-  import More from '~/components/atoms/More.vue'
+  import IconMore from '~/components/atoms/icon-more.vue'
 
 	export default {
 		components: {
-      More
+      IconMore
 		},
 	};
 </script>
@@ -71,10 +72,12 @@
     height: $header-height;
     line-height: $header-height;
     color: $color-light;
-    padding: 0 20px;
+    //padding: 0 20px;
     display: block;
     position: relative;
     transition: 0.3s background-color;
+    padding: 0 30px;
+    margin: 0 auto;
     &.active {
       position: fixed;
       top: 0;

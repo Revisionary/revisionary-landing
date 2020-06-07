@@ -15,25 +15,23 @@
 
     <div class="container xl-middle">
 
-      <div class="wrap wrap-headline xl-flexbox xl-center xl-paddingy-20">
+      <div class="wrap wrap-headline xl-flexbox xl-center">
 
         <div class="col xl-1-1">
 
           <h1>
 
-            <div class="block">
+            <div class="block" style="min-height: 100px;">
 
-              <span>Your </span>
+              <span>Work</span>
 
-              <span>ultimate</span>
+              <span>together.</span>
 
-              <span>visual </span>
-
-              <span>feedback</span>
-
-              <span>toolkit</span>
+              <span>Visually.</span>
 
             </div>
+
+
 
 
           </h1>
@@ -61,7 +59,7 @@
             <div class="block">
 
               <div class="watch-now">
-                <a class="btn btn-watch" href="#"><Play /> Watch in Action</a>
+                <a class="btn btn-watch" href="#"><IconPlay /> Watch in Action</a>
               </div>
 
             </div>
@@ -75,11 +73,14 @@
 
       <figure>
 
-        <img src="assets/images/headline-vector.png" alt="">
+        <img src="/headline-vector.png" alt="">
 
       </figure>
 
+      <img style="margin-top: -70px" class="dash" src="/screens/dash-5.png" alt="">
     </div>
+
+    <!--<Brands /> -->
 
   </section>
 
@@ -88,12 +89,14 @@
 <script>
 
   import Navigation from '~/components/organisms/Navigation.vue';
-  import Play from '~/components/atoms/Play.vue';
+  import IconPlay from '~/components/atoms/icon-play.vue';
+  import Brands from '~/components/organisms/Brands.vue'
 
 	export default {
 		components: {
       Navigation,
-      Play
+      IconPlay,
+      Brands
 		},
 	};
 
@@ -103,13 +106,16 @@
 
   section.headline {
     position: relative;
-    background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') center center/cover no-repeat;
-    background: url('/test.jpg') center center/cover no-repeat;
-    background: url('/test-2.jpg') bottom center/cover no-repeat;
-    background-color: #101218;
-    background-blend-mode: color-dodge;
+    //background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') center center/cover no-repeat;
+    //background: url('/test.jpg') center center/cover no-repeat;
+    //background: url('/test-16.jpg') center center/cover no-repeat;
+    background-color: #020b1d;
+    //background-blend-mode: color-dodge;
+    height: 1100px;
+    overflow: hidden;
     .wrap-headline {
-      height: calc(100vh - 80px - 100px);
+      //height: calc(100vh - 70px - 100px);
+      padding: 70px 0 60px 0;
     }
     & > .container {
       position: relative;
@@ -121,10 +127,11 @@
       right: 0;
       bottom: 0;
       background: linear-gradient(180deg,rgba(2,11,29,.8) 15%,rgba(2,11,29,.99) 60%);
-      background: linear-gradient(180deg, rgba(2, 11, 29, 0.85) -6%, rgba(2, 11, 29, 1) 70%);
+      background: linear-gradient(180deg, rgba(2, 11, 29, 0.8) -5%, #020b1d 40%);
+      display: none;
     }
     h1 {
-      font-size: 68px;
+      font-size: 85px;
       font-weight: 500;
       margin: 17px 0;
       line-height: 1.1;
@@ -143,6 +150,12 @@
       position: absolute;
       right: -180px;
       top: 330px;
+    }
+    img.dash {
+      border-radius: 6px;
+      width: 1300px;
+      margin: 0 auto;
+      margin-left: -50px;
     }
   }
 
@@ -192,6 +205,7 @@
       animation-fill-mode: both;
       display: inline-block;
       animation-delay: 0.1s;
+      position: relative;
       &:nth-child(2) {
         animation-delay: 0.35s;
       }
@@ -217,5 +231,19 @@
       animation-delay: 0.8s;
     }
 
+  }
+
+  .block span:nth-child(3):before {
+    content: "";
+    /* background-color: #FFF; */
+    width: 298px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    background-image: url('/line.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
   }
 </style>
