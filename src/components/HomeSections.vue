@@ -27,7 +27,7 @@
 
   import Brands from '~/components/organisms/Brands.vue'
   import HowItWorks from '~/components/organisms/HowItWorks.vue'
-  import PinFeatures from '~/components/organisms/Pinfeatures.vue'
+  import PinFeatures from '~/components/organisms/PinFeatures.vue'
   import Features from '~/components/organisms/Features.vue'
   import Collaboration from '~/components/organisms/Collaboration.vue'
 
@@ -38,7 +38,6 @@
       PinFeatures,
       Features,
       Collaboration
-
     }
 	};
 
