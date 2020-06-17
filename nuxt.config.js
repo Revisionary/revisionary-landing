@@ -14,17 +14,20 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+
   },
-	router: {
-		prefetchLinks: false,
+  router: {
+    prefetchLinks: true,
     scrollBehavior(to) {
       if (to.hash) {
-        return window.scrollTo({ top: document.querySelector(to.hash).offsetTop + window.innerHeight, behavior: 'smooth' });
+        return window.scrollTo({
+          top: document.querySelector(to.hash).offsetTop + window.innerHeight, behavior: 'smooth'
+        });
       }
       return window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-	},
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -37,6 +40,10 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {
+      src: "~/plugins/vue-tiny-slider.js",
+      ssr: false
+    }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -71,7 +78,19 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
-    }
-  }
+    extend(config, ctx) {
+    },
+    loaders: {
+      cssModules: {
+        localIdentName: "[local]--[emoji]_[hash:base64:4]",
+        modules: true,
+        hashPrefix: "my-hash"
+      }
+    },
+  },
+  loading: {
+    color: '#0363F3',
+    height: '5px',
+    throttle: '1000',
+  },
 }

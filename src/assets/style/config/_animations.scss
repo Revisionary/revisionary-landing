@@ -32,12 +32,6 @@
    }
  }
 
- .slideInUp {
-   -webkit-animation-name: slideInUp;
-   animation-name: slideInUp;
- }
-
-
  @-webkit-keyframes fadeIn {
    from {
      opacity: 0;
@@ -60,11 +54,6 @@
      opacity: 1;
      visibility: visible;
    }
- }
-
- .slideInUp {
-   -webkit-animation-name: fadeIn;
-   animation-name: fadeIn;
  }
 
 
@@ -94,7 +83,22 @@
    }
  }
 
- .slideInDown {
-   -webkit-animation-name: slideInDown;
-   animation-name: slideInDown;
+ @-webkit-keyframes progressBar {
+   from {
+     width: 0;
+   }
+
+   to {
+     width: 100%;
+   }
+ }
+
+ @keyframes progressBar {
+   from {
+     width: 0;
+   }
+
+   to {
+     width: 100%;
+   }
  }

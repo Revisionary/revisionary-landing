@@ -1,6 +1,7 @@
 <template>
   <div>
-    <headline />
+
+    <Headline />
 
     <HomeSections />
 
@@ -16,7 +17,6 @@ export default {
   components: {
     Headline,
     HomeSections
-
   }
 }
 </script>

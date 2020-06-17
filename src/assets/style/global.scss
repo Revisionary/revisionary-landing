@@ -51,6 +51,10 @@ body {
 		max-width: 1240px;
 	}
 
+	&.lg {
+		max-width: 1400px;
+	}
+
 }
 
 a {
@@ -218,14 +222,14 @@ figure {
 	margin: 0;
 	list-style-type: none;
 	padding: 0;
-	margin-top: 20px;
+	//margin-top: 20px;
 	display: inline-block;
-	border-left: 2px solid rgb(229, 232, 237);
+	//border-left: 2px solid rgb(229, 232, 237);
 	> li {
 		display: block;
     margin: 0;
-    border-left: 3px solid transparent;
-    padding: 15px 25px;
+    //border-left: 3px solid transparent;
+    padding: 15px 0;
     width: auto;
     background-color: transparent;
     transition: .3s all;
@@ -236,9 +240,9 @@ figure {
 			display: inline-block;
 			.tab-title {
 				font-weight: 500;
-				font-size: 20px;
+				font-size: 22px;
 				line-height: 36px;
-				letter-spacing: -.03em;
+				letter-spacing: -.025em;
 				color: rgba(3,27,78,.4);
 				transition: .3s all;
 			}
@@ -262,10 +266,10 @@ figure {
 				}
 			}
 			.tab-content {
-				margin-top: 5px;
+				margin-top: 10px;
 				font-size: 18px;
 				line-height: 27px;
-				letter-spacing: -0.025em;
+				letter-spacing: -0.02em;
 				color: rgba(85, 98, 116, 0.8);
 				display: none;
 			}
@@ -274,8 +278,8 @@ figure {
 			background-color: transparent;
 	    display: block;
 	    /* border-radius: 10px; */
-	    padding: 15px 25px;
-	    border-left: 2px solid #047ef3;
+			padding: 20px 0;
+			border-bottom: 1px solid #dee2ea;
 			> a,
 			> a:hover,
 			> a:focus {
@@ -298,7 +302,6 @@ figure {
 
 	&.white-skin {
 		> li {
-			background-color: rgba(0,0,0,0.05);
 			> a,
 			> a:hover,
 			> a:focus {
@@ -315,7 +318,7 @@ figure {
 				}
 			}
 			&.active {
-				background-color: rgba(0,0,0,0.15);
+				border-bottom: 1px solid rgba(255,255,255,0.3);
 				> a,
 				> a:hover,
 				> a:focus {

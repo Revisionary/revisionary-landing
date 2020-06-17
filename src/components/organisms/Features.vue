@@ -15,7 +15,9 @@
 
         <div class="col xl-1-1">
 
-          <div class="section-content">
+          <div class="section-content white">
+
+            <span class="section-category">Features</span>
 
             <h2 class="section-title">Enrich your feedback process</h2>
 
@@ -23,7 +25,7 @@
 
 
             <div class="tabs">
-              <ul class="nav nav-tabs vertical">
+              <ul class="nav nav-tabs vertical white-skin">
                 <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
                   <a :href="tab.id" @click.prevent="show = index">
                     <div class="tab-title">
@@ -151,7 +153,8 @@ export default {
 
 
 section.section--3 {
-  padding: 140px 0;
+  padding: 120px 0;
+  background-color: $light-blue;
   .tab-pane {
     h4 {
       font-weight: 500;

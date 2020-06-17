@@ -17,57 +17,28 @@
 
       </figure>
 
-      <div class="wrap xl-flexbox xl-gutter-24 xl-left xl-middle xl-2">
+      <div class="wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
 
-        <div class="col col-relative xl-5-12">
-
-          <div class="tab-content">
-
-            <div :id="tab.id" v-for="(tab, index) in tabs" v-if="show == index" :key="index">
-              <figure class="full float-left">
-                <img :src="tab.tabImage" alt="">
-              </figure>
-              <figure class="full float-left pin">
-                <img :src="tab.tabPin" alt="">
-              </figure>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="col col-relative xl-1-12">
-        </div>
-
-        <div class="col xl-5-12">
+        <div class="col xl-6-12">
 
           <div class="section-content">
 
+            <span class="section-category">Features</span>
+
             <h2 class="section-title">Your feedback, <br> visualized.</h2>
 
-            <p class="section-sub">You don't have to wait to see the changes you want on a website until developers apply them for you. <br>Just do it yourself and see how does it look <br> before you send them!</p>
-
-            <div class="tabs">
-              <ul class="nav nav-tabs">
-                <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
-                  <a :href="tab.id" @click.prevent="show = index">
-                    <div class="tab-title">
-                      <span class="tab-icon">
-                        <component :is="tab.icon"></component>
-                      </span>
-                      {{tab.title}}
-                    </div>
-                    <div class="tab-content">
-                      {{tab.content}}
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <p class="section-sub">You don't have to wait to see the changes you want on <br> a website until developers apply them for you. Just do it <br> yourself and see how does it look beforehand.</p>
 
           </div>
 
         </div>
+
+        <div class="col xl-6-12">
+
+          <img src="/box4.png" alt="">
+
+        </div>
+
 
       </div>
 
@@ -101,8 +72,7 @@ export default {
           content: 'Put your URL and start giving or receiving feedbacks, simple is that.',
           icon: 'icon-file',
           id: '#tab-1',
-          tabImage: '/screens/pin-page-2.png',
-          tabPin: '/screens/pin.png',
+          tabImage: '/box4.png',
         },
         {
           title: 'Style in live',
@@ -139,5 +109,13 @@ export default {
 </script>
 
 <style lang="scss">
+
+
+  section.section--2 {
+    padding: 140px;
+    img {
+      width: 100%;
+    }
+  }
 
 </style>

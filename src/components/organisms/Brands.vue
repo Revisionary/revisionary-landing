@@ -17,23 +17,23 @@
         </div>
 
         <div class="col">
-          <img src="/brands/xounts.png" alt="" width="130" height="26">
+          <img src="/brands/xounts-w.png" alt="" width="130" height="26">
         </div>
 
         <div class="col">
-          <img src="/brands/kia.png" alt="" width="93" height="45">
+          <img src="/brands/kia-w.png" alt="" width="93" height="45">
         </div>
 
         <div class="col">
-          <img src="/brands/twelve.png" alt="" width="130" height="26">
+          <img src="/brands/twelve-w.png" alt="" width="130" height="26">
         </div>
 
         <div class="col">
-          <img src="/brands/edelkrone.png" alt="" width="140" height="27">
+          <img src="/brands/edelkrone-w.png" alt="" width="140" height="27">
         </div>
 
         <div class="col">
-          <img src="/brands/auction.png" alt="" width="205" height="30">
+          <img src="/brands/auction-w.png" alt="" width="205" height="30">
         </div>
 
       </div>

@@ -1,7 +1,10 @@
 <template>
-  <svg class="rev-icon" width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 1L15 9.46L1 17.92V1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 8L16 12L10 16V8Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
+
 </template>
 
 <style>
