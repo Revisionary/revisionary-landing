@@ -167,7 +167,7 @@
       font-weight: 400;
       text-decoration: none;
       transition: 0.2s all ease;
-      letter-spacing: -0.012em;
+      letter-spacing: -0.005em;
       font-size: 15px;
       //border-bottom: 1px solid transparent;
       &:hover {

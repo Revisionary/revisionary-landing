@@ -1,15 +1,10 @@
 <template>
   <section class="home-section section--5">
     <div class="container xl-middle">
-      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-left xl-middle xl-1">
+      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-middle xl-1">
         <div class="col xl-1-1">
-          <div class="section-content">
+          <div class="section-content white">
             <h2 class="section-title">Improve the work flow</h2>
-
-            <p class="section-sub">
-              See your changes before developers apply them for you. Do it yourself
-              <br />in seconds and see how does it look before you send them!
-            </p>
           </div>
 
           <div class="wrap xl-flexbox xl-gutter-40 xl-left xl-middle xl-1 xl-mt-20">
@@ -17,7 +12,7 @@
               <div class="feature-block">
                 <div class="feature-title">
                   <span class="feature-icon">
-                    <i class="icon icon_coffee"></i>
+                    <IconFile />
                   </span>
                   Replace Tools
                 </div>
@@ -31,7 +26,7 @@
               <div class="feature-block">
                 <div class="feature-title">
                   <span class="feature-icon">
-                    <i class="icon icon_coffee"></i>
+                    <IconFile />
                   </span>
                   Save Time
                 </div>
@@ -45,7 +40,7 @@
               <div class="feature-block">
                 <div class="feature-title">
                   <span class="feature-icon">
-                    <i class="icon icon_coffee"></i>
+                    <IconFile />
                   </span>
                   Finalize Faster
                 </div>
@@ -58,14 +53,14 @@
         </div>
       </div>
 
-      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-left xl-middle xl-1">
-        <div class="col col-relative xl-1-1">
+      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-middle xl-1">
+        <div class="col col-relative xl-1-1" style="display: none;">
           <div class="review-slider">
             <client-only>
               <vue-tiny-slider v-bind="tinySliderOptions">
                 <div class="review-box">
                   <div class="review-holder">
-                    <img src="/avatar.png" alt />
+                    <img src="/images/avatar-1.png" alt />
                     <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
                     <span class="reviewer">Ike Elimsa</span>
                     <span class="reviewer-position">Founder at Twelve12</span>
@@ -74,7 +69,7 @@
 
                 <div class="review-box">
                   <div class="review-holder">
-                    <img src="/avatar.png" alt />
+                    <img src="/images/avatar-2.png" alt />
                     <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
                     <span class="reviewer">Ike Elimsa</span>
                     <span class="reviewer-position">Founder at Twelve12</span>
@@ -83,7 +78,7 @@
 
                 <div class="review-box">
                   <div class="review-holder">
-                    <img src="/avatar.png" alt />
+                    <img src="/images/avatar-3.png" alt />
                     <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
                     <span class="reviewer">Ike Elimsa</span>
                     <span class="reviewer-position">Founder at Twelve12</span>
@@ -92,7 +87,7 @@
 
                 <div class="review-box">
                   <div class="review-holder">
-                    <img src="/avatar.png" alt />
+                    <img src="/images/avatar-1.png" alt />
                     <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
                     <span class="reviewer">Ike Elimsa</span>
                     <span class="reviewer-position">Founder at Twelve12</span>
@@ -101,7 +96,7 @@
 
                 <div class="review-box">
                   <div class="review-holder">
-                    <img src="/avatar.png" alt />
+                    <img src="/images/avatar-2.png" alt />
                     <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
                     <span class="reviewer">Ike Elimsa</span>
                     <span class="reviewer-position">Founder at Twelve12</span>
@@ -117,7 +112,11 @@
 </template>
 
 <script>
+import IconFile from "@/components/atoms/icon-file.vue";
 export default {
+  components: {
+    IconFile
+  },
   head() {
     return {
       link: [
@@ -133,8 +132,7 @@ export default {
     return {
       tinySliderOptions: {
         mouseDrag: true,
-        loop: false,
-        items: 1,
+        //loop: false,
         swipeAngle: 45,
         items: 3,
         //center: true,
@@ -154,9 +152,8 @@ export default {
   
 <style lang="scss">
 section.section--5 {
-  background: $cloud-blue;
+  background: #020b1d;
   padding: 140px 0;
-  max-width: 90%;
   .section-title {
     h2 {
       font-weight: 500;
@@ -177,23 +174,31 @@ section.section--5 {
   .feature-block {
     display: inline-block;
     width: 100%;
-    margin: 35px 0;
+    margin: 30px 0;
+    text-align: center;
     .feature-title {
       font-weight: 500;
-      font-size: 20px;
+      font-size: 22px;
       letter-spacing: -0.03em;
-      color: $title-color;
+      color: #fff;
       .feature-icon {
-        display: inline-block;
-        width: 39px;
-        height: 39px;
+        display: block;
+        width: 65px;
+        height: 65px;
         text-align: center;
         font-size: 19px;
-        line-height: 40px;
-        background-color: #f2f8ff;
-        color: #0069ff;
-        margin-right: 10px;
-        border-radius: 10px;
+        line-height: 65px;
+        background-color: #FFF;
+        color: #fff;
+        border-radius: 16px;
+        vertical-align: middle;
+        margin: 20px auto;
+        svg {
+          vertical-align: middle;
+          stroke: $title-color;
+          width: 28px;
+          height: 28px;
+        }
       }
     }
     .feature-content {
@@ -250,7 +255,7 @@ section.section--5 {
 }
 
 .review-holder {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
   //border: 1px solid #dee3eb;
   border-radius: 2px;
   padding: 120px 70px;

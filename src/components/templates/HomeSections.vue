@@ -7,28 +7,28 @@
 
 <template>
   <div>
-    <Section1 />
-    <Section2 />
-    <Section3 />
+    <FeaturesSided />
+    <FeaturesTabs />
     <Reviews />
+    <CTA />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Section0 from "@/components/organisms/HowItWorks.vue";
-import Section1 from "@/components/sections/Section1.vue";
-import Section2 from "@/components/sections/Section2.vue";
-import Section3 from "@/components/sections/Section3.vue";
-
-import Reviews from "@/components/organisms/Reviews.vue";
+import FeaturesSided from "@/components/sections/home/FeaturesSided.vue";
+import FeaturesTabs from "@/components/sections/home/FeaturesTabs.vue";
+import Reviews from "@/components/sections/home/Reviews.vue";
+import CTA from "@/components/sections/home/CTA.vue"; 
+import Footer from "@/components/organisms/Footer.vue";
 
 export default {
   components: {
-    Section0,
-    Section1,
-    Section2,
-    Section3,
-    Reviews
+    FeaturesSided,
+    FeaturesTabs,
+    Reviews,
+    CTA,
+    Footer,
   }
 };
 </script>
@@ -43,7 +43,6 @@ export default {
     position: relative;
   }
 }
-
 .section-content {
   &.left {
     padding-left: 100px;
@@ -86,9 +85,9 @@ export default {
     }
   }
   .section-title {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 64px;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.045em;
     color: $title-color;
     margin: 0;
     line-height: 1.1;
@@ -97,7 +96,7 @@ export default {
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: -0.015em;
-    color: $p-color;
+    color: #7a8492;
     margin-top: 12px;
   }
   &.white {
@@ -108,17 +107,10 @@ export default {
       color: rgba(255, 255, 255, 0.8);
     }
   }
-  .section-category {
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: 600;
-    color: #c1cad6;
-    margin-bottom: 10px;
-    display: inline-block;
-  }
 }
 
 .section-features {
+  margin-top: 10px;
   hr {
     width: 100px;
     margin: 0;
@@ -126,6 +118,7 @@ export default {
     background-color: #ddd;
     border: none;
     border-bottom: 2px solid #d1d7e4;
+    display: none;
   }
   .feature {
     display: inline-block;
@@ -143,7 +136,7 @@ export default {
     }
     span.feature-title {
       font-size: 20px;
-      color: #5b6987;
+      color: #7a8492;
       letter-spacing: -0.015em;
     }
   }

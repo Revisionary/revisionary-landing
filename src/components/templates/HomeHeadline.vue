@@ -7,16 +7,18 @@
 
 <template>
   <section class="headline">
+    <div class="overlay"></div>
+
     <navigation />
 
     <div class="container xl-middle">
       <div class="wrap wrap-headline xl-flexbox xl-center">
         <div class="col xl-1-1">
           <h1>
-            <div class="block" style="min-height: 117px;">
-              <span>Work</span>
+            <div class="block" style="min-height: 110px;">
+              <span>Gather</span>
 
-              <span>together.</span>
+              <span>feedback.</span>
 
               <span>Visually.</span>
             </div>
@@ -56,7 +58,7 @@
           loop
           muted
           playsinline
-          poster="/video-poster.png"
+          poster="/images/video-poster.png"
           src="https://s3.amazonaws.com/pastel.prod/assets/how-it-works-video.mp4"
           width="1260"
           height="598"
@@ -68,7 +70,7 @@
     <div class="container">
       <div class="wrap xl-flexbox xl-gutter-50 xl-center xl-middle xl-2">
         <div class="col xl-4-12">
-          <a class="step step-1 active" href="#">
+          <a class="step step-1" href="#">
             <div class="step-progress"></div>
             <div class="step-content">
               <h4>1. Start with URL</h4>
@@ -102,24 +104,23 @@
 </template>
 
 <script>
+
 import Navigation from "~/components/organisms/Navigation.vue";
 import IconPlay from "~/components/atoms/icon-play.vue";
-import Brands from "~/components/organisms/Brands.vue";
 
 export default {
   components: {
     Navigation,
-    IconPlay,
-    Brands
+    IconPlay
   }
 };
+
 </script>
 
 <style lang="scss">
 section.headline {
   position: relative;
   background-color: #020b1d;
-  overflow: hidden;
   .wrap-headline {
     padding: 100px 0 70px;
   }
@@ -127,7 +128,7 @@ section.headline {
     position: relative;
   }
   h1 {
-    font-size: 96px;
+    font-size: 90px;
     font-weight: 500;
     margin: 12px 0;
     line-height: 1.1;
@@ -155,6 +156,73 @@ section.headline {
     width: 100%;
     border-radius: 6px;
     object-fit: cover;
+  }
+  .step {
+    display: inline-block;
+    transition: 0.3s all;
+    text-decoration: none;
+    opacity: 0.6;
+    &:hover {
+      text-decoration: none;
+      transform: translate(0, -5px);
+      opacity: 1;
+    }
+    &.active {
+      opacity: 1;
+      .step-progress {
+        &:before {
+          content: "";
+          width: 0;
+          height: 4px;
+          background-color: #fff;
+          position: absolute;
+          left: 0;
+          animation-name: progressBar;
+          animation-duration: 15s;
+          animation-fill-mode: both;
+          animation-timing-function: linear;
+          border-radius: 100px;
+        }
+      }
+      .step-content {
+        h4 {
+          color: #b3b9c1;
+        }
+      }
+    }
+  }
+
+  .step-progress {
+    margin: 45px 0 25px 0;
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    position: relative;
+  }
+
+  .step-content {
+    margin: 0 0 120px 0;
+    text-align: left;
+    h4 {
+      font-size: 24px;
+      font-weight: 500;
+      color: #FFF;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.02em;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      letter-spacing: -0.015em;
+      color: #b3b9c1;
+      margin-top: 0;
+    }
+    img {
+      width: 220px;
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -251,71 +319,4 @@ section.headline {
   }
 }
 
-.step {
-  display: inline-block;
-  opacity: 0.7;
-  transition: 0.3s all;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    transform: translate(0, -5px);
-    opacity: 1;
-  }
-  &.active {
-    opacity: 1;
-    .step-progress {
-      &:before {
-        content: "";
-        width: 0;
-        height: 4px;
-        background-color: #fff;
-        position: absolute;
-        left: 0;
-        animation-name: progressBar;
-        animation-duration: 15s;
-        animation-fill-mode: both;
-        animation-timing-function: linear;
-        border-radius: 100px;
-      }
-    }
-    .step-content {
-      h4 {
-        color: #fff;
-      }
-    }
-  }
-}
-
-.step-progress {
-  margin: 50px 0 25px 0;
-  display: inline-block;
-  width: 100%;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  position: relative;
-}
-
-.step-content {
-  margin: 0 0 70px 0;
-  text-align: left;
-  h4 {
-    font-size: 22px;
-    font-weight: 500;
-    color: #a6abb1;
-    margin: 0 0 10px 0;
-    letter-spacing: -0.02em;
-  }
-  p {
-    font-size: 18px !important;
-    padding-right: 15px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-top: 20px;
-    letter-spacing: -0.01em !important;
-  }
-  img {
-    width: 220px;
-    margin-bottom: 25px;
-  }
-}
 </style>

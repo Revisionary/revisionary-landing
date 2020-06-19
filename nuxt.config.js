@@ -43,7 +43,8 @@ export default {
     {
       src: "~/plugins/vue-tiny-slider.js",
       ssr: false
-    }
+    },
+
   ],
   /*
   ** Nuxt.js dev-modules

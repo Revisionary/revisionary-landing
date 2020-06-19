@@ -8,11 +8,11 @@
 <template>
   <section class="home-section section--3">
     <div class="container xl-middle">
-      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-left xl-middle xl-2">
+      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-top xl-2">
         <div class="col xl-1-1">
           <div class="section-content white">
             <span class="section-icon">
-              <IconPhase />
+              <IconPlus />
             </span>
 
             <h2 class="section-title">Enrich your feedback process</h2>
@@ -24,7 +24,7 @@
           </div>
         </div>
 
-        <div class="col col-relative xl-9-12">
+        <div class="col col-relative xl-1-1">
           <div class="tab-content">
             <div :id="tab.id" v-for="(tab, index) in tabs" v-if="show == index" :key="index">
               <figure class="full float-left">
@@ -34,13 +34,12 @@
           </div>
         </div>
 
-        <div class="col xl-3-12">
+        <div class="col xl-1-1">
           <div class="tabs">
-            <ul class="nav nav-tabs white-skin">
+            <ul class="nav nav-tabs vertical white-skin">
               <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
                 <a :href="tab.id" @click.prevent="show = index">
                   <div class="tab-title">{{tab.title}}</div>
-                  <div class="tab-content">{{tab.content}}</div>
                 </a>
               </li>
             </ul>
@@ -52,11 +51,11 @@
 </template>
 
 <script>
-import IconPhase from "~/components/atoms/icon-phase.vue";
+import IconPlus from "~/components/atoms/icon-plus.vue";
 
 export default {
   components: {
-    IconPhase
+    IconPlus
   },
 
   data: function() {
@@ -70,7 +69,7 @@ export default {
             "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
           icon: "icon-phase",
           id: "#tab-1",
-          tabImage: "/screens/pin-page.png",
+          tabImage: "/images/screens/pin-page.png",
           tabTips: "asdf"
         },
         {
@@ -125,10 +124,8 @@ export default {
 
 <style lang="scss">
 section.section--3 {
-  padding: 120px 0 250px 0;
+  padding: 120px 0;
   background-color: $light-blue;
-  max-width: 1600px;
-  width: 97%;
   .tab-pane {
     h4 {
       font-weight: 500;
@@ -175,40 +172,19 @@ section.section--3 {
       }
     }
   }
-  .tab-vertical {
-    .wrap {
-      padding: 80px 0 0 0;
-      .col-content {
-        padding-left: 80px;
-      }
-    }
-  }
   .tabs {
-    margin-top: 100px;
+    padding-left: 45px;
+    width: 100%;
+    text-align: center;
+    .nav-tabs {
+      width: 100%;
+      border-bottom-color: rgba(255,255,255,0.15);
+    }
   }
   figure {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px,
-      rgba(0, 0, 0, 0.2) 0px 0px 1px;
+    margin-top: 70px;
     img {
-      border-radius: 6px;
-      max-width: none;
-    }
-    &.full {
-      position: absolute;
-      top: -140px;
-      //width: 100%;
-      &.float-right {
-        left: 100px;
-      }
-      &.float-left {
-        right: 100px;
-      }
-      &.pin {
-        box-shadow: none;
-        right: 30px;
-        top: 0;
-        left: auto;
-      }
+      width: 100%;
     }
   }
 }
