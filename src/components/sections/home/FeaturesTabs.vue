@@ -8,10 +8,10 @@
 <template>
   <section class="home-section section--3">
     <div class="container xl-middle">
-      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-top xl-2">
+      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-top xl-2" style="display:none;">
         <div class="col xl-1-1">
           <div class="section-content white">
-            <span class="section-icon">
+            <span class="section-icon white">
               <IconPlus />
             </span>
 
@@ -46,6 +46,43 @@
           </div>
         </div>
       </div>
+
+      <div class="feature-wrapper wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
+        <div class="col xl-6-12 aos-init">
+          <figure>
+            <img src="/images/box8.png" alt />
+          </figure>
+        </div>
+
+        <div class="col xl-6-12" data-aos="fade-left"> 
+          <div class="section-content white left">
+            <span class="section-icon white">
+              <IconPlus />
+            </span>
+            <h2 class="section-title">
+              Rediscover <br>
+              feedbacks
+            </h2>
+
+            <p class="section-sub">
+              You don't have to wait to see the changes you want on
+              a website until developers apply them for you.
+            </p>
+
+            <div class="tabs">
+              <ul class="nav nav-tabs white-skin">
+                <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
+                  <a :href="tab.id" @click.prevent="show = index">
+                    <div class="tab-title">{{tab.title}}</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -62,16 +99,6 @@ export default {
     return {
       show: 0,
       tabs: [
-        {
-          title: "File Annotations",
-          ctitle: "Versioning arrived to feedbacks",
-          content:
-            "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
-          icon: "icon-phase",
-          id: "#tab-1",
-          tabImage: "/images/screens/pin-page.png",
-          tabTips: "asdf"
-        },
         {
           title: " Phasing",
           ctitle: "Versioning arrived to feedbacks2",
@@ -93,7 +120,7 @@ export default {
           tabTips: "asdf"
         },
         {
-          title: "Dark Mode",
+          title: "Collaboration",
           ctitle: "Versioning arrived to feedbacks",
           content:
             "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
@@ -124,7 +151,7 @@ export default {
 
 <style lang="scss">
 section.section--3 {
-  padding: 120px 0;
+  padding: 40px 0;
   background-color: $light-blue;
   .tab-pane {
     h4 {
@@ -173,16 +200,15 @@ section.section--3 {
     }
   }
   .tabs {
-    padding-left: 45px;
+    //padding-left: 45px;
     width: 100%;
-    text-align: center;
+    text-align: left;
     .nav-tabs {
       width: 100%;
       border-bottom-color: rgba(255,255,255,0.15);
     }
   }
   figure {
-    margin-top: 70px;
     img {
       width: 100%;
     }

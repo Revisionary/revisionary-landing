@@ -83,6 +83,12 @@ export default {
         stroke: #e43d3d;
       }
     }
+    &.white {
+      background-color: rgba(255,255,255,0.15);
+      svg {
+        stroke: #FFF;
+      }
+    }
   }
   .section-title {
     font-weight: 500;

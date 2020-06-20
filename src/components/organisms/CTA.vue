@@ -21,7 +21,7 @@ export default {};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 160px 0;
+  padding: 100px 0;
   & > .container {
     position: relative;
   }
@@ -39,20 +39,22 @@ export default {};
     color: #7a8492;
     margin-top: 12px;
   }
-  .button-white {
-    background: #ffffff;
-    border-radius: 100px;
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: -0.02em;
-    color: #0363f3;
+  .button-white {  
     display: inline-block;
-    border: none;
-    height: 55px;
-    line-height: 55px;
-    width: auto;
-    padding: 0 35px;
-    margin-top: 40px;
+    border-radius: 100px;
+    min-height: 65px;
+    line-height: 65px;
+    text-align: center;
+    padding: 0 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s all;
+    margin: 40px 0 0 0;
+    background: #0363f3;
+    font-size: 18px;
+    letter-spacing: -0.015em;
+    color: #ffffff;
+    font-weight: 600;
   }
 }
 </style>

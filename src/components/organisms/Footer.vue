@@ -33,9 +33,6 @@
                 <a href="#">Plans & Pricing</a>
               </li>
               <li>
-                <a href="#">Roadmap</a>
-              </li>
-              <li>
                 <a href="#">Release Notes</a>
               </li>
             </ul>
@@ -55,9 +52,6 @@
               <li>
                 <a href="#">For Startups</a>
               </li>
-              <li>
-                <a href="#">For Personal Projects</a>
-              </li>
             </ul>
           </div>
           <div class="col">
@@ -68,9 +62,6 @@
               </li>
               <li>
                 <a href="#">Support Center</a>
-              </li>
-              <li>
-                <a href="#">FAQs</a>
               </li>
               <li>
                 <a href="#">Docs</a>
@@ -112,15 +103,7 @@
     <div class="bottom">
       <div class="container">
         <div class="wrap xl-gutter-24">
-          <div class="col xl-3-12">
-            <div class="brand">
-              <a href="#">
-                <img src="assets/images/logo-full.svg" alt />
-              </a>
-            </div>
-          </div>
-
-          <div class="col xl-5-12">
+          <div class="col xl-8-12">
             <ul class="legal-nav">
               <li>
                 <a href="#">Privacy Policy</a>
@@ -134,7 +117,7 @@
             </ul>
           </div>
 
-          <div class="col xl-4-12">
+          <div class="col xl-4-12 xl-right">
             <span class="copyright">© 2020 Revisionary.com, Ltd. All rights reserved.</span>
           </div>
         </div>
@@ -151,7 +134,8 @@ export default {};
 footer {
   background-color: #fff;
   color: $color-light;
-  padding: 120px 0;
+  padding: 100px 0 50px 0;
+  border-top: 1px solid rgba(0,0,0,.05);
 }
 
 .footer-nav-title {
@@ -171,7 +155,7 @@ footer {
     a {
       display: inline-block;
       font-size: 16px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.005em;
       color: $p-low;
       text-decoration: none;
       padding: 7px 0;
@@ -191,14 +175,14 @@ footer {
     }
     &:hover {
       a {
-        color: #fff;
+        color: $title-color;
       }
     }
   }
 }
 
 .bottom {
-  background-color: #010e28;
+  background-color: #FFF;
   height: 90px;
   line-height: 90px;
   position: relative;
@@ -222,15 +206,15 @@ footer {
     a {
       display: inline-block;
       font-size: 16px;
-      letter-spacing: -0.02em;
-      color: rgba(217, 223, 232, 0.4);
+      letter-spacing: -0.005em;
+      color: $p-low;
       text-decoration: none;
       padding: 0 12px;
       transition: 0.3s all;
     }
     &:hover {
       a {
-        color: #fff;
+        color: $title-color;
       }
     }
     &:first-child {
@@ -243,7 +227,7 @@ footer {
 
 .copyright {
   font-size: 16px;
-  letter-spacing: -0.02em;
-  color: rgba(217, 223, 232, 0.4);
+  letter-spacing: -0.005em;
+  color: $p-low;
 }
 </style>

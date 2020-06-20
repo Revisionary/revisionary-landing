@@ -1,7 +1,7 @@
 <template>
   <section class="home-section section--5">
     <div class="container xl-middle">
-      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-middle xl-1">
+      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-left xl-middle xl-1">
         <div class="col xl-1-1">
           <div class="section-content white">
             <h2 class="section-title">Improve the work flow</h2>
@@ -14,10 +14,10 @@
                   <span class="feature-icon">
                     <IconFile />
                   </span>
-                  Replace Tools
+                  Unify Team
                 </div>
                 <div class="feature-content">
-                  <p>See your changes before developers apply them for you do it your.See your changes before developers apply them for you.</p>
+                  <p>See your changes before developers apply them for you do it your.See your changes before developers.</p>
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@
                   Save Time
                 </div>
                 <div class="feature-content">
-                  <p>See your changes before developers apply them for you do it your.See your changes before developers apply them for you.</p>
+                  <p>See your changes before developers apply them for you do it your.See your changes before developers.</p>
                 </div>
               </div>
             </div>
@@ -45,10 +45,15 @@
                   Finalize Faster
                 </div>
                 <div class="feature-content">
-                  <p>See your changes before developers apply them for you do it your.See your changes before developers apply them for you.</p>
+                  <p>See your changes before developers apply them for you do it your.See your changes before developers.</p>
                 </div>
               </div>
             </div>
+
+            <div class="col xl-1-1">
+              <img src="/test.png"> 
+            </div>
+
           </div>
         </div>
       </div>
@@ -175,17 +180,17 @@ section.section--5 {
     display: inline-block;
     width: 100%;
     margin: 30px 0;
-    text-align: center;
+    text-align: left;
     .feature-title {
       font-weight: 500;
       font-size: 22px;
       letter-spacing: -0.03em;
       color: #fff;
       .feature-icon {
-        display: block;
+        display: none;
         width: 65px;
         height: 65px;
-        text-align: center;
+        text-align: left; 
         font-size: 19px;
         line-height: 65px;
         background-color: #FFF;

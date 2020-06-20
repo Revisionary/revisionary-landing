@@ -21,9 +21,9 @@
 
           <nav class="navigation">
             <li class="nav-element"><nuxt-link :to="{ path: '/', hash:'#how-it-works'}">How It Works</nuxt-link></li>
-            <li class="nav-element"><nuxt-link :to="{ path: '/', hash:'#features'}">Features</nuxt-link></a></li>
-            <li class="nav-element"><a href="#">Pricing & Plans</a></li>
-            <li class="nav-element"><a href="#">Support</a></li>
+            <li class="nav-element"><nuxt-link :to="{ path: '/', hash:'#features'}">Features <i class="arrow down"></i></nuxt-link></a></li>
+            <li class="nav-element"><a href="#">Use Cases <i class="arrow down"></i></a></li>
+            <li class="nav-element"><a href="#">Support <i class="arrow down"></i></a></li>
           </nav>
 
         </div>
@@ -97,7 +97,7 @@
        box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 0px 1px;
       .nav-element {
         a {
-          color: $p-low;
+          color: #4f5a69;
           &:hover {
             color: $dark-blue;
           }
@@ -127,7 +127,7 @@
       
       .nav-element {
         a {
-          color: $p-low;
+          color: #4f5a69;
           &:hover {
             color: $dark-blue;
           }
@@ -168,7 +168,7 @@
       text-decoration: none;
       transition: 0.2s all ease;
       letter-spacing: -0.005em;
-      font-size: 15px;
+      font-size: 16px;
       //border-bottom: 1px solid transparent;
       &:hover {
         color: #FFF;

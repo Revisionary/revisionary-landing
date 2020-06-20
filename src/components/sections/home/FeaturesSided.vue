@@ -26,17 +26,16 @@
               <br />Just do it yourself and see how does.
             </p>
 
-            <div class="section-features" data-aos-delay="200">
-              <hr />
-              <div class="feature">
-                <span class="icon-box"></span>
-                <span class="feature-title">Different types of pins</span>
-              </div>
-              <div class="feature">
-                <span class="icon-box"></span>
-                <span class="feature-title">Works on all types of websites</span>
-              </div>
+            <div class="tabs">
+              <ul class="nav nav-tabs">
+                <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
+                  <a :href="tab.id" @click.prevent="show = index">
+                    <div class="tab-title"> {{tab.title}}</div>
+                  </a>
+                </li>
+              </ul>
             </div>
+
           </div>
         </div>
 
@@ -70,16 +69,14 @@
               <br />Just do it yourself and see how does.
             </p>
 
-            <div class="section-features">
-              <hr />
-              <div class="feature">
-                <span class="icon-box"></span>
-                <span class="feature-title">Different types of pins</span>
-              </div>
-              <div class="feature">
-                <span class="icon-box"></span>
-                <span class="feature-title">Demonstrate your feedback on live websites</span>
-              </div>
+            <div class="tabs">
+              <ul class="nav nav-tabs">
+                <li v-for="(tab, index) in tabs2" :class="{'active': show == index}">
+                  <a :href="tab.id" @click.prevent="show = index">
+                    <div class="tab-title">{{tab.title}}</div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -103,17 +100,16 @@
             </p>
           </div>
 
-          <div class="section-features">
-            <hr />
-            <div class="feature">
-              <span class="icon-box"></span>
-              <span class="feature-title">Content differences</span>
-            </div>
-            <div class="feature">
-              <span class="icon-box"></span>
-              <span class="feature-title">Demonstrate your feedback on live websites</span>
-            </div>
+          <div class="tabs">
+            <ul class="nav nav-tabs">
+              <li v-for="(tab, index) in tabs3" :class="{'active': show == index}">
+                <a :href="tab.id" @click.prevent="show = index">
+                  <div class="tab-title">{{tab.title}}</div>
+                </a>
+              </li>
+            </ul>
           </div>
+
         </div>
 
         <div class="col xl-6-12" data-aos="fade-left">
@@ -134,6 +130,77 @@ import IconFile from "@/components/atoms/icon-file.vue";
 import IconSliders from "@/components/atoms/icon-sliders.vue";
 
 export default {
+  data: function() {
+    return {
+      show: 0,
+      tabs: [
+        {
+          title: "Feedback on Live Website",
+          ctitle: "Versioning arrived to feedbacks",
+          content:
+            "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
+          icon: "icon-phase",
+          id: "#tab-1",
+          tabImage: "/images/screens/pin-page.png",
+          tabTips: "asdf"
+        },
+        {
+          title: " Feedback on Files",
+          ctitle: "Versioning arrived to feedbacks2",
+          content:
+            "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
+          icon: "icon-phase",
+          id: "#tab-1",
+          tabImage: "/screens/pin-page.png",
+          tabTips: "asdf"
+        },
+      ],
+      tabs2: [
+        {
+          title: "Content Pin",
+          ctitle: "Versioning arrived to feedbacks",
+          content:
+            "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
+          icon: "icon-phase",
+          id: "#tab-1",
+          tabImage: "/images/screens/pin-page.png",
+          tabTips: "asdf"
+        },
+        {
+          title: "Style Pin",
+          ctitle: "Versioning arrived to feedbacks2",
+          content:
+            "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
+          icon: "icon-phase",
+          id: "#tab-1",
+          tabImage: "/screens/pin-page.png",
+          tabTips: "asdf"
+        },
+      ],
+      tabs3: [
+        {
+          title: "Content Differences",
+          ctitle: "Versioning arrived to feedbacks",
+          content:
+            "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
+          icon: "icon-phase",
+          id: "#tab-1",
+          tabImage: "/images/screens/pin-page.png",
+          tabTips: "asdf"
+        },
+        {
+          title: "Style Differences",
+          ctitle: "Versioning arrived to feedbacks2",
+          content:
+            "See your changes before developers apply them for you. Do it yourself in seconds and see how does it look before you send them!",
+          icon: "icon-phase",
+          id: "#tab-1",
+          tabImage: "/screens/pin-page.png",
+          tabTips: "asdf"
+        },
+      ]
+    };
+  },
   components: {
     IconFile,
     IconCopy,
