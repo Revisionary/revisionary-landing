@@ -5,53 +5,51 @@
  *
  * ========================================================================= */
 
-
- /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
  	* ------- Colors ------- *
 
  -*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
- // Dark Colors
- $color-dark: #868686;
- $color-darker: #333333;
- $color-darkest: #000000;
+// Dark Colors
+$color-dark: #868686;
+$color-darker: #333333;
+$color-darkest: #000000;
 
- // Light Colors
- $color-light: #FFF;
- $color-lighter: #FBF9F9;
- $color-lightest: #FFFFFF;
+// Light Colors
+$color-light: #fff;
+$color-lighter: #fbf9f9;
+$color-lightest: #ffffff;
 
- // Other Colors
- $color-lightest-blue: #3EB5F1;
- $color-light-blue: #00A3FF;
- $color-blue: #329BD6;
- $color-dark-blue: #115277;
- $color-picton-blue: #54C0E8;
- $color-green: #76BC21;
- $color-grey: #6F6F6F;
- $color-light-grey: #DADADA;
- $color-light-black: #374150;
- $color-bronze: #CD7F32;
- $color-silver: #C0C0C0;
- $color-gold: #FFB800;
- $color-platinum: #E5E4E3;
+// Other Colors
+$color-lightest-blue: #3eb5f1;
+$color-light-blue: #00a3ff;
+$color-blue: #329bd6;
+$color-dark-blue: #115277;
+$color-picton-blue: #54c0e8;
+$color-green: #76bc21;
+$color-grey: #6f6f6f;
+$color-light-grey: #dadada;
+$color-light-black: #374150;
+$color-bronze: #cd7f32;
+$color-silver: #c0c0c0;
+$color-gold: #ffb800;
+$color-platinum: #e5e4e3;
 
- $bg-color: $color-lightest;
- $header-bg-color: $color-light;
- $footer-bg-color: $color-blue;
+$bg-color: $color-lightest;
+$header-bg-color: $color-light;
+$footer-bg-color: $color-blue;
 
- $dark-blue: #010E28;
- $light-blue: #0363F3;
- $cloud-blue: #f3f5f9;
+$dark-blue: #010e28;
+$light-blue: #0363f3;
+$cloud-blue: #f3f5f9;
 
- $p-color: #5b6987;
- $p-low: #7a8492;
+$p-color: #5b6987;
+$p-low: #7a8492;
 
- $title-color: #031b4e;
+$title-color: #031b4e;
 
- // Add as many as you need...
-
+// Add as many as you need...
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -63,12 +61,10 @@ $container-width: 1140px;
 
 $finger-size: 44px;
 
-$header-height: 60px;
-$header-fixed-height: 60px;
+$header-height: 65px;
+$header-fixed-height: 65px;
 $footer-height: 80px;
 $button-size: 44px; // Buttons and inputs sizes
-
-
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -76,9 +72,12 @@ $button-size: 44px; // Buttons and inputs sizes
 
 -*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
-$font-family: Euclid Circular A, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$primary-font-family: Euclid Circular A, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$secondary-font-family: Euclid Circular A, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family: SF Pro Display, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$primary-font-family: SF Pro Display, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+	sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$secondary-font-family: SF Pro Display, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+	sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $font-size-smaller: 12px;
 $font-size-small: 14px;
@@ -86,8 +85,6 @@ $font-size: 16px;
 $font-size-large: 18px;
 $font-size-larger: 20px;
 $font-size-largest: 24px;
-
-
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -100,9 +97,7 @@ $title-font-family: $secondary-font-family;
 $title-font-size: $font-size-larger;
 $title-line-height: normal;
 $title-font-weight: bold;
-$title-font: $title-font-weight #{$title-font-size"/"$title-line-height} $title-font-family;
-
-
+$title-font: $title-font-weight #{$title-font-size "/" $title-line-height} $title-font-family;
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -115,9 +110,7 @@ $text-font-family: $primary-font-family;
 $text-font-size: $font-size-small;
 $text-line-height: 1.4;
 $text-font-weight: 400;
-$text-font: $text-font-weight #{$text-font-size"/"$text-line-height} $text-font-family;
-
-
+$text-font: $text-font-weight #{$text-font-size "/" $text-line-height} $text-font-family;
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -128,8 +121,6 @@ $text-font: $text-font-weight #{$text-font-size"/"$text-line-height} $text-font-
 $border-color: $color-dark;
 $border-width: 1px;
 $border-radius: 3px;
-
-
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -143,9 +134,7 @@ $button-border-color: $border-color;
 $button-border-width: $border-width;
 $button-border-radius: $border-radius;
 
-$button-font: $text-font-weight #{$text-font-size"/"$text-line-height} $text-font-family;
-
-
+$button-font: $text-font-weight #{$text-font-size "/" $text-line-height} $text-font-family;
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -161,4 +150,4 @@ $input-border-color: $border-color;
 $input-border-width: $border-width;
 $input-border-radius: $border-radius;
 
-$input-font: $text-font-weight #{$text-font-size"/"$text-line-height} $text-font-family;
+$input-font: $text-font-weight #{$text-font-size "/" $text-line-height} $text-font-family;

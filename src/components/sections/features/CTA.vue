@@ -26,7 +26,7 @@ export default {};
     position: relative;
   }
   h5 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 64px;
     color: #031c4e;
     margin: 0;

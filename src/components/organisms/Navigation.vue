@@ -16,14 +16,14 @@
         <div class="col xl-8-12">
 
           <div class="brand">
-            <a href="#"><Logo /></a>
+            <nuxt-link :to="{ path: '/'}"><Logo /></nuxt-link>
           </div>
 
           <nav class="navigation">
             <li class="nav-element"><nuxt-link :to="{ path: '/', hash:'#how-it-works'}">How It Works</nuxt-link></li>
-            <li class="nav-element"><nuxt-link :to="{ path: '/', hash:'#features'}">Features <i class="arrow down"></i></nuxt-link></a></li>
-            <li class="nav-element"><a href="#">Use Cases <i class="arrow down"></i></a></li>
-            <li class="nav-element"><a href="#">Support <i class="arrow down"></i></a></li>
+            <li class="nav-element"><nuxt-link :to="{ path: '/features'}">Features </nuxt-link></a></li>
+            <li class="nav-element"><a href="#">Use Cases</a></li>
+            <li class="nav-element"><a href="#">Support</a></li>
           </nav>
 
         </div>
@@ -81,67 +81,12 @@
     color: $color-light;
     display: block;
     position: relative;
-    transition: 0.3s background-color;
     padding: 0 20px;
     margin: 0 auto;
-    background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, transparent 50%, #FFF 50%);
-    -webkit-transition: background-position 0.3s;
-    -moz-transition: background-position 0.3s;
-    transition: background-position 0.3s;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     .container {
-      max-width: 100%;
+      max-width: 1300px;
     }
-    &:hover {
-      background-position: 0 -100%;
-       box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 0px 1px;
-      .nav-element {
-        a {
-          color: #4f5a69;
-          &:hover {
-            color: $dark-blue;
-          }
-        }
-        .btn-signup {
-          background-color: $light-blue;
-          color: #FFF;
-          &:hover {
-            color: #FFF;
-          }
-        }
-      }
-    }
-    &.active {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      height: $header-fixed-height;
-      line-height: $header-fixed-height;
-      animation-name: slideInDown;
-      animation-duration: 0.4s;
-      animation-fill-mode: both;
-      background: #FFF;
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 0px 1px;
-      
-      .nav-element {
-        a {
-          color: #4f5a69;
-          &:hover {
-            color: $dark-blue;
-          }
-        }
-        .btn-signup {
-          background-color: $light-blue;
-          color: #FFF;
-          &:hover {
-            color: #FFF;
-          }
-        }
-      }
-    }
-
     .brand {
       display: inline-block;
       svg {
@@ -163,12 +108,12 @@
     padding: 0 10px;
     a {
       padding: 5px 0px;
-      color: #b3b9c1;
+      color: rgba(255,255,255,0.7);
       font-weight: 400;
       text-decoration: none;
       transition: 0.2s all ease;
       letter-spacing: -0.005em;
-      font-size: 16px;
+      font-size: 15px;
       //border-bottom: 1px solid transparent;
       &:hover {
         color: #FFF;

@@ -134,7 +134,7 @@ export default {};
 footer {
   background-color: #fff;
   color: $color-light;
-  padding: 100px 0 50px 0;
+  padding: 90px 0 50px 0;
   border-top: 1px solid rgba(0,0,0,.05);
 }
 

@@ -10,7 +10,6 @@
 @import "config/_animations";
 @import "tools/normalize/normalize";
 
-
 /**
  * = Global
  *
@@ -18,19 +17,19 @@
  *
  * ========================================================================= */
 
-html, body {
+html,
+body {
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
 }
-
 
 body {
 	color: $text-color;
 	font: $text-font;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -38,7 +37,6 @@ body {
 		outline: none;
 		box-sizing: border-box;
 	}
-
 }
 
 .container {
@@ -48,13 +46,12 @@ body {
 	margin-right: auto;
 
 	&.brand {
-		max-width: 1240px;
+		max-width: 1400px;
 	}
 
 	&.lg {
 		max-width: 1400px;
 	}
-
 }
 
 a {
@@ -126,7 +123,7 @@ select {
 	color: $input-text-color;
 
 	&::placeholder {
-		color: #8E949D;
+		color: #8e949d;
 		font-weight: 500;
 	}
 
@@ -138,7 +135,6 @@ select {
 	&.full {
 		width: 100%;
 	}
-
 }
 
 textarea {
@@ -164,41 +160,52 @@ ul {
 	cursor: not-allowed;
 }
 
-h1, .h1-size,
-h2, .h2-size,
-h3, .h3-size,
-h4, .h4-size,
-h5, .h5-size,
-h6, .h6-size {
+h1,
+.h1-size,
+h2,
+.h2-size,
+h3,
+.h3-size,
+h4,
+.h4-size,
+h5,
+.h5-size,
+h6,
+.h6-size {
 	color: inherit;
 	font: $title-font;
 }
 
-h2, .h2-size {
+h2,
+.h2-size {
 	font-size: #{$title-font-size * 0.9};
 	line-height: normal;
 	font-weight: normal;
 }
 
-h3, .h3-size {
+h3,
+.h3-size {
 	font-size: #{$title-font-size * 0.8};
 	line-height: normal;
 	font-weight: normal;
 }
 
-h4, .h4-size {
+h4,
+.h4-size {
 	font-size: #{$title-font-size * 0.7};
 	line-height: normal;
 	font-weight: normal;
 }
 
-h5, .h5-size {
+h5,
+.h5-size {
 	font-size: #{$title-font-size * 0.6};
 	line-height: normal;
 	font-weight: normal;
 }
 
-h6, .h6-size {
+h6,
+.h6-size {
 	font-size: #{$title-font-size * 0.5};
 	line-height: normal;
 	font-weight: normal;
@@ -216,53 +223,37 @@ figure {
 	vertical-align: middle;
 }
 
-
 .nav-tabs {
-	width: 410px;
+	width: 100%;
 	margin: 0;
 	list-style-type: none;
 	padding: 0;
-	//margin-top: 20px;
-	display: inline-block;
-	//border-left: 2px solid rgb(229, 232, 237);
+	display: flex;
+	border-bottom: 1px solid #dee2ea;
 	> li {
-		display: block;
-    margin: 0;
-    //border-left: 3px solid transparent;
-    padding: 15px 0;
-    width: auto;
-    background-color: transparent;
-    transition: .3s all;
-    margin-left: -2px;
+		flex: 1;
+		margin: 0;
+		//border-left: 3px solid transparent;
+		padding: 10px 0;
+		width: auto;
+		background-color: transparent;
+		transition: 0.3s all;
+		margin-bottom: -1px;
 		> a {
 			text-decoration: none;
 			position: relative;
 			display: inline-block;
+			width: 100%;
 			.tab-title {
-				font-weight: 500;
-				font-size: 22px;
-				line-height: 36px;
-				letter-spacing: -.025em;
-				color: rgba(3,27,78,.4);
-				transition: .3s all;
-			}
-			.tab-icon {
-				display: inline-block;
-		    background: rgb(222, 226, 234);
-		    color: rgba(255,255,255,.8);
-		    border: 1px solid transparent;
-		    box-sizing: border-box;
-		    border-radius: 10px;
-		    font-weight: 600;
-		    width: 36px;
-		    height: 36px;
-		    text-align: center;
-		    line-height: 36px;
-		    font-size: 19px;
-		    margin-right: 10px;
-		    transition: .3s all;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: -0.01em;
+				color: rgba(1, 6, 15, 0.25);
+				transition: 0.3s all;
+				text-align: center;
 				svg {
-					vertical-align: text-top;
+					display: none;
 				}
 			}
 			.tab-content {
@@ -276,22 +267,17 @@ figure {
 		}
 		&.active {
 			background-color: transparent;
-	    display: block;
-	    /* border-radius: 10px; */
-			padding: 20px 0;
-			border-bottom: 1px solid #dee2ea;
+			display: block;
+			border-bottom: 1px solid rgba(1, 6, 15, 1);
 			> a,
 			> a:hover,
 			> a:focus {
 				cursor: default;
 				.tab-title {
-					color: $title-color;
-				}
-				.tab-icon {
-					background: #0363f3;
-					color: #FFFFFF;
-					border: 1px solid rgba(118, 129, 144, 0.12);
-					box-shadow: 0px 6px 11px rgba(58, 62, 87, 0.15);
+					color: #01060f;
+					svg {
+						stroke: #0363f3;
+					}
 				}
 				.tab-content {
 					display: block;
@@ -299,95 +285,9 @@ figure {
 			}
 		}
 	}
-
-	&.white-skin {
-		> li {
-			> a,
-			> a:hover,
-			> a:focus {
-				.tab-title {
-					color: rgba(255, 255, 255, 0.5);
-					transition: 0.3s all;
-				}
-				.tab-icon {
-					background: rgba(255, 255, 255, 0.2);
-					color: rgba(255, 255, 255, 0.5);
-				}
-				.tab-content {
-					color: rgba(255, 255, 255, 0.7);
-				}
-			}
-			&.active {
-				border-bottom: 1px solid rgba(255,255,255,0.3);
-				> a,
-				> a:hover,
-				> a:focus {
-					.tab-title {
-						color: #FFF;
-					}
-					.tab-icon {
-						background: #FFF;;
-						color: #0363F3;
-					}
-				}
-			}
-		}
-	}
-
-	&.vertical {
-		width: 100%;
-		border-bottom: 2px solid #e5e8ed;
-		border-left: none;
-		display: flex;
-  	flex-wrap: wrap;
-		> li {
-			display: inline-block;
-			background-color: transparent;
-			margin-bottom: -2px;
-			border-bottom: 2px solid transparent;
-			border-left: none;
-			border-radius: 0;
-			padding: 20px 25px;
-			flex: auto;
-			> a {
-				text-decoration: none;
-				position: relative;
-				display: inline-block;
-			}
-
-			&.active {
-				background-color: transparent;
-				border-bottom: 2px solid #047ef3;
-				border-left: none;
-				padding: 20px 25px;
-				> a,
-				> a:hover,
-				> a:focus {
-					.tab-icon {
-						background: #0363F3;
-						color: #FFF;
-						&.purple {
-							background: #0363F3;
-						}
-						&.blue {
-							background: #ff5e57;
-						}
-						&.orange {
-							background: #ffa801;
-						}
-						&.dark {
-							background: #000;
-						}
-					}
-				}
-			}
-		}
-	}
-
 }
 
 .tab-content {
-
 	> .tab-pane {
 		//display: none;
 
@@ -400,7 +300,6 @@ figure {
 		display: block;
 	}
 }
-
 
 /**
  * = Include Tools

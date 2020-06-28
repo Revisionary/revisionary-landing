@@ -5,15 +5,9 @@
         <div class="col xl-1-1">
           <div class="section-content white">
             <h2 class="section-title">Improve the work flow</h2>
-            <p>See your changes before developers apply them for you do it your.See your changes before developers.</p>
           </div>
 
           <div class="wrap xl-flexbox xl-gutter-40 xl-left xl-middle xl-1 xl-mt-20">
-            <div class="col xl-1-1">
-              <figure>
-                <img src="/images/dash.jpg" />
-              </figure>
-            </div>
             <div class="col xl-4-12">
               <div class="feature-block">
                 <div class="feature-title">
@@ -55,6 +49,66 @@
                 </div>
               </div>
             </div>
+
+            <div class="col xl-1-1">
+              <img src="/test.png"> 
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-middle xl-1">
+        <div class="col col-relative xl-1-1" style="display: none;">
+          <div class="review-slider">
+            <client-only>
+              <vue-tiny-slider v-bind="tinySliderOptions">
+                <div class="review-box">
+                  <div class="review-holder">
+                    <img src="/images/avatar-1.png" alt />
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
+                    <span class="reviewer">Ike Elimsa</span>
+                    <span class="reviewer-position">Founder at Twelve12</span>
+                  </div>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-holder">
+                    <img src="/images/avatar-2.png" alt />
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
+                    <span class="reviewer">Ike Elimsa</span>
+                    <span class="reviewer-position">Founder at Twelve12</span>
+                  </div>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-holder">
+                    <img src="/images/avatar-3.png" alt />
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
+                    <span class="reviewer">Ike Elimsa</span>
+                    <span class="reviewer-position">Founder at Twelve12</span>
+                  </div>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-holder">
+                    <img src="/images/avatar-1.png" alt />
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
+                    <span class="reviewer">Ike Elimsa</span>
+                    <span class="reviewer-position">Founder at Twelve12</span>
+                  </div>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-holder">
+                    <img src="/images/avatar-2.png" alt />
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.</p>
+                    <span class="reviewer">Ike Elimsa</span>
+                    <span class="reviewer-position">Founder at Twelve12</span>
+                  </div>
+                </div>
+              </vue-tiny-slider>
+            </client-only>
           </div>
         </div>
       </div>
@@ -67,14 +121,44 @@ import IconFile from "@/components/atoms/icon-file.vue";
 export default {
   components: {
     IconFile
+  },
+  head() {
+    return {
+      link: [
+        {
+          rel: "stylesheet",
+          href:
+            "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css"
+        }
+      ]
+    };
+  },
+  data() {
+    return {
+      tinySliderOptions: {
+        mouseDrag: true,
+        //loop: false,
+        swipeAngle: 45,
+        items: 3,
+        //center: true,
+        gutter: 30,
+        loop: false,
+        mouseDrag: true,
+        nav: false,
+        controlsText: [
+          "<i class='icon icon_arrow-left'></i>",
+          "<i class='icon icon_arrow-right'></i>"
+        ]
+      }
+    };
   }
 };
 </script>
   
 <style lang="scss">
 section.section--5 {
-  background: #010610;
-  padding: 160px 0;
+  background: #020b1d;
+  padding: 140px 0;
   .section-title {
     h2 {
       font-weight: 500;
@@ -98,18 +182,18 @@ section.section--5 {
     margin: 30px 0;
     text-align: left;
     .feature-title {
-      font-weight: 600;
-      font-size: 24px;
-      letter-spacing: -0.02em;
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.03em;
       color: #fff;
       .feature-icon {
         display: none;
         width: 65px;
         height: 65px;
-        text-align: left;
-        font-size: 22px;
+        text-align: left; 
+        font-size: 19px;
         line-height: 65px;
-        background-color: #fff;
+        background-color: #FFF;
         color: #fff;
         border-radius: 16px;
         vertical-align: middle;
@@ -124,10 +208,10 @@ section.section--5 {
     }
     .feature-content {
       p {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.6;
         letter-spacing: -0.01em;
-        color: rgba(255, 255, 255, 0.6);
+        color: $p-low;
         font-weight: 400;
         margin-top: 12px;
       }

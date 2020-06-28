@@ -307,7 +307,7 @@ export default {
 
 <style lang="scss">
 section.section--2 {
-  padding: 60px 0 105px 0;
+  padding: 0;
   img {
     width: 100%;
   }

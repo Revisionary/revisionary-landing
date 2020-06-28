@@ -8,10 +8,7 @@
 <template>
   <section class="home-section section--3">
     <div class="container xl-middle">
-      <div
-        class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-top xl-2"
-        style="display:none;"
-      >
+      <div class="main-wrap wrap xl-flexbox xl-gutter-24 xl-center xl-top xl-2" style="display:none;">
         <div class="col xl-1-1">
           <div class="section-content white">
             <span class="section-icon white">
@@ -57,14 +54,14 @@
           </figure>
         </div>
 
-        <div class="col xl-6-12" data-aos="fade-left">
+        <div class="col xl-6-12" data-aos="fade-left"> 
           <div class="section-content white left">
             <span class="section-icon white">
               <IconPlus />
             </span>
             <h2 class="section-title">
-              Rediscover
-              <br />feedbacks
+              Rediscover <br>
+              feedbacks
             </h2>
 
             <p class="section-sub">
@@ -77,15 +74,15 @@
                 <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
                   <a :href="tab.id" @click.prevent="show = index">
                     <div class="tab-title">
-                      <span>
-                        <component :is="tab.icon"></component>
-                      </span>
+                      <span><component :is="tab.icon"></component></span>
                       {{tab.title}}
                     </div>
                   </a>
                 </li>
               </ul>
             </div>
+
+
           </div>
         </div>
       </div>
@@ -190,6 +187,12 @@ section.section--3 {
     figure.feature-image {
       position: relative;
       z-index: 9;
+      img {
+        //box-shadow: 0 10px 100px rgba(0,0,0,1);
+        border-radius: 16px;
+        box-shadow: rgba(3, 27, 78, 0.1) 0 2px 20px;
+        width: 100%;
+      }
     }
     .usage-tips {
       //background-color: rgba(0,0,0,0.1);
@@ -212,7 +215,7 @@ section.section--3 {
     text-align: left;
     .nav-tabs {
       width: 100%;
-      border-bottom-color: rgba(255, 255, 255, 0.15);
+      border-bottom-color: rgba(255,255,255,0.15);
     }
   }
   figure {

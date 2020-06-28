@@ -8,7 +8,6 @@
 <template>
   <div>
     <FeaturesSided />
-    <FeaturesTabs />
     <Reviews />
     <CTA />
     <Footer />
@@ -17,18 +16,16 @@
 
 <script>
 import FeaturesSided from "@/components/sections/home/FeaturesSided.vue";
-import FeaturesTabs from "@/components/sections/home/FeaturesTabs.vue";
 import Reviews from "@/components/sections/home/Reviews.vue";
-import CTA from "@/components/sections/home/CTA.vue"; 
+import CTA from "@/components/sections/home/CTA.vue";
 import Footer from "@/components/organisms/Footer.vue";
 
 export default {
   components: {
     FeaturesSided,
-    FeaturesTabs,
     Reviews,
     CTA,
-    Footer,
+    Footer
   }
 };
 </script>
@@ -37,7 +34,6 @@ export default {
 .home-section {
   position: relative;
   margin: 0 auto;
-  border-radius: 4px;
   overflow: hidden;
   .col-relative {
     position: relative;
@@ -47,63 +43,47 @@ export default {
   &.left {
     padding-left: 100px;
   }
-  .section-icon {
-    display: inline-block;
-    background-color: #e7f0f9;
-    width: 70px;
-    height: 70px;
-    line-height: 65px;
-    border-radius: 21px;
-    text-align: center;
-    margin-right: 8px;
-    margin-bottom: 20px;
-    svg {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
-      stroke: #047def;
-    }
-    &.blue {
-    }
-    &.orange {
-      background-color: #f7e6dc;
-      svg {
-        stroke: #e6903a;
-      }
-    }
-    &.green {
-      background-color: #def7dc;
-      svg {
-        stroke: #8ee63a;
-      }
-    }
-    &.red {
-      background-color: #f9e7e7;
-      svg {
-        stroke: #e43d3d;
-      }
-    }
-    &.white {
-      background-color: rgba(255,255,255,0.15);
-      svg {
-        stroke: #FFF;
-      }
-    }
+  &.right {
+    padding-right: 100px;
   }
   .section-title {
-    font-weight: 500;
-    font-size: 64px;
-    letter-spacing: -0.045em;
-    color: $title-color;
+    font-weight: 600;
+    font-size: 70px;
+    letter-spacing: -0.0275em;
+    color: #01060f;
     margin: 0;
-    line-height: 1.1;
+    line-height: 1.05;
   }
   .section-sub {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.5;
-    letter-spacing: -0.015em;
-    color: #7a8492;
-    margin-top: 12px;
+    letter-spacing: -0.01em;
+    color: rgba(1, 6, 15, 0.7);
+    margin-top: 15px;
+  }
+  .section-cat {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    color: rgba(1, 6, 15, 0.7);
+  }
+  .section-more {
+    display: inline-block;
+    margin: 20px auto 0;
+    font-size: 23px;
+    font-weight: 500;
+    color: #026fc9;
+    text-align: center;
+    transition: 0.3s all;
+    text-decoration: none;
+    svg {
+      fill: #026fc9;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
   }
   &.white {
     .section-title {
