@@ -49,13 +49,13 @@ export default {
   .section-title {
     font-weight: 600;
     font-size: 70px;
-    letter-spacing: -0.0275em;
+    letter-spacing: -0.035em;
     color: #01060f;
     margin: 0;
     line-height: 1.05;
   }
   .section-sub {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.5;
     letter-spacing: -0.01em;
     color: rgba(1, 6, 15, 0.7);
@@ -64,7 +64,7 @@ export default {
   .section-cat {
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 15px;
     letter-spacing: 0.5px;
     color: rgba(1, 6, 15, 0.7);
@@ -72,7 +72,7 @@ export default {
   .section-more {
     display: inline-block;
     margin: 20px auto 0;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
     color: #026fc9;
     text-align: center;

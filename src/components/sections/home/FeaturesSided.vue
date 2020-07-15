@@ -7,163 +7,177 @@
 
 <template>
   <section id="features" class="home-section section--2">
-    <div class="container xl-middle">
-      <div class="feature-wrapper wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
-        <div class="col xl-6-12">
-          <div class="section-content right">
-            <div class="section-cat">Annotations</div>
-            <h2 class="section-title">
-              Pin your
-              <br />thoughts
-            </h2>
+    <div class="feature-wrapper">
+      <div class="container">
+        <div class="wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
+          <div class="col xl-6-12">
+            <div class="section-content right">
+              <div class="section-cat">Annotations</div>
+              <h2 class="section-title">
+                Pin your
+                <br />thoughts
+              </h2>
 
-            <p
-              class="section-sub"
-            >Sharing ideas about a project usually works trough an email or a static documents. With Revisionary, it's not the case. Simply create your project by entering your website's url, select the area you want to leave your comment, and that's all.</p>
-            <a class="section-more" href="#">
-              Learn More
-              <IconArrow />
-            </a>
+              <p
+                class="section-sub"
+              >Sharing ideas about a project usually works trough an email or a static documents. With Revisionary, it's not the case. Simply create your project by entering your website's url, select the area you want to leave your comment, and that's all.</p>
+              <a class="section-more" href="#">
+                Start Now
+                <IconArrow />
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="col xl-6-12">
-          <figure>
-            <img src="/images/box-1.png" alt />
-          </figure>
-          <div class="tabs">
-            <ul class="nav nav-tabs mini-tabs">
-              <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
-                <a :href="tab.id" @click.prevent="show = index">
-                  <div class="tab-title">
-                    <span>
-                      <component :is="tab.icon"></component>
-                    </span>
-                    {{tab.title}}
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="feature-wrapper wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
-        <div class="col xl-6-12">
-          <figure>
-            <img src="/images/box-2.png" alt />
-          </figure>
-          <div class="tabs">
-            <ul class="nav nav-tabs mini-tabs">
-              <li v-for="(tab, index) in tabs2" :class="{'active': show == index}">
-                <a :href="tab.id" @click.prevent="show = index">
-                  <div class="tab-title">
-                    <span>
-                      <component :is="tab.icon"></component>
-                    </span>
-                    {{tab.title}}
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col xl-6-12">
-          <div class="section-content left">
-            <div class="section-cat">Feedback visualising</div>
-            <h2 class="section-title">
-              Visualize
-              <br />your ideas
-            </h2>
-
-            <p
-              class="section-sub"
-            >Have you ever revise your own revision? Indeed. Writing things sucks because every perspective sees that differently. Means, you can any website component's on live. Play with positions, texts, background images and much more...</p>
-            <a class="section-more" href="#">
-              Learn More
-              <IconArrow />
-            </a>
+          <div class="col xl-6-12">
+            <figure>
+              <img src="/images/box-1.png" alt />
+            </figure>
+            <div class="tabs">
+              <ul class="nav nav-tabs mini-tabs">
+                <li v-for="(tab, index) in tabs" :class="{'active': show == index}">
+                  <a :href="tab.id" @click.prevent="show = index">
+                    <div class="tab-title">
+                      <span>
+                        <component :is="tab.icon"></component>
+                      </span>
+                      {{tab.title}}
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="feature-wrapper wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
-        <div class="col xl-6-12" data-aos="fade-right">
-          <div class="section-content right">
-            <div class="section-cat">Feedback differences</div>
-            <h2 class="section-title">
-              Show the
-              <br />difference
-            </h2>
-
-            <p
-              class="section-sub"
-            >Have you ever revise your own revision? Indeed. Writing things sucks because every perspective sees that differently. Means, you can any website component's on live. Play with positions, texts, background images and much more...</p>
-            <a class="section-more" href="#">
-              Learn More
-              <IconArrow />
-            </a>
+    <div class="feature-wrapper" style="background-color: #f7f7f9;">
+      <div class="container">
+        <div class="wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
+          <div class="col xl-6-12">
+            <figure>
+              <img src="/images/box-2.png" alt />
+            </figure>
+            <div class="tabs">
+              <ul class="nav nav-tabs mini-tabs">
+                <li v-for="(tab, index) in tabs2" :class="{'active': show == index}">
+                  <a :href="tab.id" @click.prevent="show = index">
+                    <div class="tab-title">
+                      <span>
+                        <component :is="tab.icon"></component>
+                      </span>
+                      {{tab.title}}
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col xl-6-12" data-aos="fade-left">
-          <figure>
-            <img src="/images/box-3.png" alt />
-          </figure>
-          <div class="tabs">
-            <ul class="nav nav-tabs mini-tabs">
-              <li v-for="(tab, index) in tabs3" :class="{'active': show == index}">
-                <a :href="tab.id" @click.prevent="show = index">
-                  <div class="tab-title">
-                    <span>
-                      <component :is="tab.icon"></component>
-                    </span>
-                    {{tab.title}}
-                  </div>
-                </a>
-              </li>
-            </ul>
+          <div class="col xl-6-12">
+            <div class="section-content left">
+              <div class="section-cat">Feedback visualising</div>
+              <h2 class="section-title">
+                Visualize
+                <br />your ideas
+              </h2>
+
+              <p
+                class="section-sub"
+              >Have you ever revise your own revision? Indeed. Writing things sucks because every perspective sees that differently. Means, you can any website component's on live. Play with positions, texts, background images and much more...</p>
+              <a class="section-more" href="#">
+                Start Now
+                <IconArrow />
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="feature-wrapper wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
-        <div class="col xl-6-12">
-          <figure>
-            <img src="/images/box-1.png" alt />
-          </figure>
-          <div class="tabs">
-            <ul class="nav nav-tabs mini-tabs">
-              <li v-for="(tab, index) in tabs4" :class="{'active': show == index}">
-                <a :href="tab.id" @click.prevent="show = index">
-                  <div class="tab-title">
-                    <span>
-                      <component :is="tab.icon"></component>
-                    </span>
-                    {{tab.title}}
-                  </div>
-                </a>
-              </li>
-            </ul>
+    <div class="feature-wrapper">
+      <div class="container">
+        <div class="wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
+          <div class="col xl-6-12" data-aos="fade-right">
+            <div class="section-content right">
+              <div class="section-cat">Feedback differences</div>
+              <h2 class="section-title">
+                Show the
+                <br />difference
+              </h2>
+
+              <p
+                class="section-sub"
+              >Have you ever revise your own revision? Indeed. Writing things sucks because every perspective sees that differently. Means, you can any website component's on live. Play with positions, texts, background images and much more...</p>
+              <a class="section-more" href="#">
+                Start Now
+                <IconArrow />
+              </a>
+            </div>
+          </div>
+
+          <div class="col xl-6-12" data-aos="fade-left">
+            <figure>
+              <img src="/images/box-3.png" alt />
+            </figure>
+            <div class="tabs">
+              <ul class="nav nav-tabs mini-tabs">
+                <li v-for="(tab, index) in tabs3" :class="{'active': show == index}">
+                  <a :href="tab.id" @click.prevent="show = index">
+                    <div class="tab-title">
+                      <span>
+                        <component :is="tab.icon"></component>
+                      </span>
+                      {{tab.title}}
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="col xl-6-12">
-          <div class="section-content left">
-            <div class="section-cat">Enchancers</div>
-            <h2 class="section-title">
-              Rediscover
-              <br />feedbacks
-            </h2>
+    <div class="feature-wrapper">
+      <div class="container">
+        <div class="wrap xl-flexbox xl-gutter-0 xl-left xl-middle xl-2">
+          <div class="col xl-6-12">
+            <figure>
+              <img src="/images/box-1.png" alt />
+            </figure>
+            <div class="tabs">
+              <ul class="nav nav-tabs mini-tabs">
+                <li v-for="(tab, index) in tabs4" :class="{'active': show == index}">
+                  <a :href="tab.id" @click.prevent="show = index">
+                    <div class="tab-title">
+                      <span>
+                        <component :is="tab.icon"></component>
+                      </span>
+                      {{tab.title}}
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <p
-              class="section-sub"
-            >Sharing ideas about a project usually works trough an email or a static documents. With Revisionary, it's not the case. Simply create your project by entering your website's url, select the area you want to leave your comment, and that's all.</p>
-            <a class="section-more" href="#">
-              Learn More
-              <IconArrow />
-            </a>
+          <div class="col xl-6-12">
+            <div class="section-content left">
+              <div class="section-cat">Enchancers</div>
+              <h2 class="section-title">
+                Rediscover
+                <br />feedbacks
+              </h2>
+
+              <p
+                class="section-sub"
+              >Sharing ideas about a project usually works trough an email or a static documents. With Revisionary, it's not the case. Simply create your project by entering your website's url, select the area you want to leave your comment, and that's all.</p>
+              <a class="section-more" href="#">
+                Start Now
+                <IconArrow />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -314,7 +328,7 @@ section.section--2 {
 }
 
 .feature-wrapper {
-  padding: 140px 0;
+  padding: 140px 0 185px 0;
   figure {
     background-color: #f5f5f7;
     //padding: 50px 0;

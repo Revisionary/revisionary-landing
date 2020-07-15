@@ -61,6 +61,7 @@
 
     <div class="container">
       <div class="wrap xl-flexbox xl-gutter-50 xl-center xl-middle">
+        <Brands />
         <div class="col xl-7-12 introduction">
           <p>Revisionary is a web-based feedback tool designed to make the most powerful feedbacking tool accessible to everyone. And with an extensive collection of tools for editing and retouching photos, creating graphic designs, painting, drawing vector graphics, and adding stunning effects, it’s the only image editor you’ll need.</p>
           <a href="#">
@@ -77,12 +78,13 @@
 import Navigation from "~/components/organisms/Navigation.vue";
 import IconPlay from "~/components/atoms/icon-play.vue";
 import IconArrow from "~/components/atoms/icon-arrow-right.vue";
-
+import Brands from "@/components/sections/premade/Brands.vue";
 export default {
   components: {
     Navigation,
     IconPlay,
-    IconArrow
+    IconArrow,
+    Brands
   }
 };
 </script>
@@ -90,23 +92,23 @@ export default {
 <style lang="scss" scoped>
 section.headline {
   position: relative;
-  background-color: #010610;
+  background-color: #040404;
   .wrap-headline {
-    padding: 120px 0 80px;
+    padding: 100px 0;
   }
   & > .container {
     position: relative;
   }
   h1 {
     font-size: 94px;
-    font-weight: 700;
+    font-weight: 500;
     margin: 20px 0;
     line-height: 1;
     color: #fff;
     letter-spacing: -0.0275em;
   }
   p {
-    font-size: 24px;
+    font-size: 22px;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
     font-weight: 400;
@@ -121,9 +123,10 @@ section.headline {
   .introduction {
     padding: 80px 0 200px 0;
     p {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 500;
       color: rgba(255, 255, 255, 1);
+      letter-spacing: -0.01em;
     }
     a {
       display: inline-block;

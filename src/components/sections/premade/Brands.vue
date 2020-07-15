@@ -6,36 +6,32 @@
 -->
 
 <template>
-  <section class="home-section section--brands">
-    <div class="container">
-      <div class="wrap xl-gutter-24 xl-center xl-middle xl-5">
-        <div class="col">
-          <img src="/brands/xounts.png" alt width="130" height="26" />
-        </div>
-
-        <div class="col">
-          <img src="/brands/kia.png" alt width="93" height="45" />
-        </div>
-
-        <div class="col">
-          <img src="/brands/twelve.png" alt width="130" height="26" />
-        </div>
-
-        <div class="col">
-          <img src="/brands/edelkrone.png" alt width="140" height="27" />
-        </div>
-
-        <div class="col">
-          <img src="/brands/auction.png" alt width="205" height="30" />
-        </div>
-      </div>
+  <div class="brands wrap xl-gutter-24 xl-center xl-middle xl-5">
+    <div class="col">
+      <img src="/images/brands/xounts-w.png" alt width="130" height="26" />
     </div>
-  </section>
+
+    <div class="col">
+      <img src="/images/brands/kia-w.png" alt width="93" height="45" />
+    </div>
+
+    <div class="col">
+      <img src="/images/brands/twelve-w.png" alt width="130" height="26" />
+    </div>
+
+    <div class="col">
+      <img src="/images/brands/edelkrone-w.png" alt width="140" height="27" />
+    </div>
+
+    <div class="col">
+      <img src="/images/brands/auction-w.png" alt width="205" height="30" />
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
-section.section--brands {
-  padding: 25px 0;
+.brands {
+  padding: 45px 0 0 0;
   img {
     opacity: 0.5;
   }
