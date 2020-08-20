@@ -9,7 +9,6 @@ WORKDIR ${APP_ROOT}
 COPY package.json ${APP_ROOT}
 COPY package-lock.json ${APP_ROOT}
 COPY nuxt.config.js ${APP_ROOT}
-COPY jsconfig.json ${APP_ROOT}
 COPY README.md ${APP_ROOT}
 RUN npm ci
 
