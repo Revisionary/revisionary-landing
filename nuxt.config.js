@@ -1,7 +1,7 @@
 
 export default {
   srcDir: 'src/',
-  mode: 'universal',
+  ssr: true,
   /*
   ** Headers of the page
   */
